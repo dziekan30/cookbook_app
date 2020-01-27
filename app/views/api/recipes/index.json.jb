@@ -1,5 +1,5 @@
 @recipes.map do |recipe|
 
-render partial: "cookbook.json.jb", locals: {recipe: recipe}
+render partial: "recipe.json.jb", locals: {recipe: recipe}
 
 end
