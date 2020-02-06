@@ -1,6 +1,6 @@
 {
   id: recipe.id,
-  tirle: recipe.title,
+  title: recipe.title,
   chef: recipe.chef,
   ingredients: recipe.ingredients,
   directions: recipe.directions,

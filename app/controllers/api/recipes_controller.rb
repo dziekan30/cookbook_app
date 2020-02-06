@@ -15,9 +15,8 @@ class Api::RecipesController < ApplicationController
   
   def create
     
-
     @recipe = Recipe.new(
-                          user_id: current_user.id,
+                          user_id: 1 ,#  current_user.id,
                           title: params[:title],
                           ingredients: params[:ingredients],
                           directions: params[:directions],
@@ -30,12 +29,8 @@ class Api::RecipesController < ApplicationController
 
   def show
  
-    # if current_user
       @recipe = Recipe.find(params[:id])
       render "show.json.jb"
-    # else
-    #   render json: {}
-    # end
 
   end
 

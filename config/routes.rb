@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   namespace :api do
     post '/users' => 'users#create'
-
     post "/sessions" => "sessions#create"
 
     get '/recipes' => 'recipes#index'
@@ -9,8 +8,6 @@ Rails.application.routes.draw do
     get '/recipes/:id' => 'recipes#show'
     patch '/recipes/:id' => 'recipes#update'
     delete '/recipes/:id' => 'recipes#destroy'
-
-    
 
   end
 end
