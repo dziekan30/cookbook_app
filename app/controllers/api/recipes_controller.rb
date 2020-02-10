@@ -20,7 +20,8 @@ class Api::RecipesController < ApplicationController
                           title: params[:title],
                           ingredients: params[:ingredients],
                           directions: params[:directions],
-                          prep_time: params[:prep_time]
+                          prep_time: params[:prep_time],
+                          image_url: params[:image_url]
                           )
 
     @recipe.save
@@ -38,10 +39,11 @@ class Api::RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
 
     @recipe.title =params[:title] || @recipe.title
-    @recipe.chef =params[:chef] || @recipe.chef
+    # @recipe.chef =params[:chef] || @recipe.chef
     @recipe.directions =params[:directions] || @recipe.directions
     @recipe.ingredients =params[:ingredients] || @recipe.ingredients
     @recipe.prep_time =params[:prep_time] || @recipe.prep_time
+    @recipe.image_url =params[:image_url] || @recipe.image_url
 
     @recipe.save
     render "show.json.jb"
